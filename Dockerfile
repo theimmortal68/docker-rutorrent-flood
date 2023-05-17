@@ -52,8 +52,8 @@ RUN git clone https://github.com/novik/rutorrent /var/www/rutorrent && \
 
 # Initialize container environment variables
 ENV PUID="1000" \
-    PGID="1001" \
-    TZ="America/New_York"
+    PGID="1000" \
+    TZ="Etc/UTC"
 
 # Add default user and group
 RUN addgroup -g ${PGID} abc && \
