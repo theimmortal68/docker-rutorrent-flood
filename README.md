@@ -34,7 +34,7 @@ docker run --name rtorrent                                           \
     -v /path/to/wireguard/conf/wg0.conf:/etc/wireguard/wg0.conf      \
     -p 8080:8080                                                     \
     -p 3000:3000                                                     \
-    --restart=unless-stopped
+    --restart=unless-stopped                                         \
     theimmortal/rtorrent
 ```
 
