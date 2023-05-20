@@ -21,7 +21,7 @@ This project is intended to run a rTorrent BitTorrent client behind a Wireguard 
 ### Command Line
 
 ```bash
-docker run --name rtorrent                                           \
+docker run --name rutorrent-flood                                    \
     --cap-add NET_ADMIN                                              \
     --cap-add SYS_MODULE                                             \
     --sysctl net.ipv4.conf.all.src_valid_mark=1                      \
@@ -35,7 +35,7 @@ docker run --name rtorrent                                           \
     -p 8080:8080                                                     \
     -p 3000:3000                                                     \
     --restart=unless-stopped                                         \
-    theimmortal/rtorrent
+    docker.io/theimmortal/rutorrent-flood
 ```
 
 ### Docker Compose
@@ -45,8 +45,8 @@ Here is the same example as above, but using Docker Compose:
 ```yml
 services:
   rtorrent:
-    container_name: rtorrent
-    image: theimmortal/rtorrent
+    container_name: rutorrent-flood
+    image: docker.io/theimmortal/rutorrent-flood
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
